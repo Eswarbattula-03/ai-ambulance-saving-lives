@@ -8,9 +8,15 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview --port 4173 --host",
-    "server": "node server/index.js"
+    "server": "node server/index.js",
+    "db:check": "node server/verify-db.js",
+    "test:api": "node server/smoke-test.js",
+    "test:server": "node server/integration-test.js"
   },
   "dependencies": {
+    "dotenv": "^18.0.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.10.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2"
